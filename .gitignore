@@ -1,0 +1,48 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Editor specific files
+*~
+*.swp
+*.swo
+.DS_Store
+
+# Go workspace and dependencies
+vendor/
+
+# Go build outputs
+/tmp/
+*.log
+*.tmp
+
+# Dependency directories (remove the comment below if you use Go modules)
+# /vendor/
+
+# Environment variable files
+.env
+
+# Log files
+*.log
+
+# IDE specific files
+.vscode/
+.idea/
+
+# Air tool specific files
+.air/
+tmp/
+
+# By default, the Go build command puts binaries in the current directory
+# You might also want to ignore binaries produced by go build
+**/main
+**/*.test
+
+# Node modules (if you are using node for frontend or other purposes)
+node_modules/
