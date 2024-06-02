@@ -1,0 +1,63 @@
+# .air.toml - Configuration file for Air
+
+# General settings
+[general]
+# Optional. Working directory
+# Usually it's current directory, but you can change it to any other directory.
+root = "."
+
+# Build settings
+[build]
+# Required. Command to build your project.
+cmd = "go build -o ./tmp/main ."
+
+# Required. Binary file path after build.
+bin = "./tmp/main"
+
+# Optional. Full binary file path.
+# If not specified, air will use [build.bin] as full binary file path.
+full_bin = ""
+
+# Required. Log file path.
+log = "air.log"
+
+# Optional. Log format.
+# Supported format: text, json
+log_format = "text"
+
+# Watch settings
+[watch]
+# Required. Directory patterns to watch.
+dirs = ["src", "pkg", "."]
+
+# Optional. Excluded directory patterns.
+# It's useful if you want to exclude some directories.
+excludes = ["tmp", "vendor", "node_modules", ".git"]
+
+# Optional. File extension patterns to watch.
+# If not specified, air will watch all files in watch.dirs.
+# It's useful if you want to watch only specific file extensions.
+extensions = ["go", "tpl", "tmpl", "html"]
+
+# Optional. Ignore files matching these regex patterns.
+# It's useful if you want to ignore some files.
+ignore_files = [".*\\.gitignore"]
+
+# Optional. Delay after each change.
+# It's useful if you want to wait for a while before restarting the application.
+# Default value is 0 seconds.
+delay = 1000 # 1 second
+
+# Logger settings
+[logger]
+# Optional. Logger color.
+# If not specified, air will use default color.
+color = true
+
+# Optional. Logger time format.
+# If not specified, air will use default time format.
+time_format = "15:04:05"
+
+# Optional. Logger path format.
+# If not specified, air will use default path format.
+path_format = "short"
